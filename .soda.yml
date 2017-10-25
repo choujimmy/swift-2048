@@ -5,11 +5,16 @@
 
 # SODA Unity3D引擎游戏客户端工程标准构建模版
 from: mac
+envs:
+  debug: true
+  modal: 1.0
+
 
 stages:
   build:
     # 使用Unity3D插件，该插件自动生成构建入口静态方法
-    - brew install nvm
-    - nvm install v8.6.0
-    - npm install
-    - npm run
+    - plugin_unity3d --version latest
+    # 使用企业签名证书插件，该插件自动安装企业签名证书
+    - plugin_entcert
+    # 使用XCode插件
+    - plugin_xcode
