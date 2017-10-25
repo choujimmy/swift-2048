@@ -9,8 +9,7 @@ from: mac
 stages:
   build:
     # 使用Unity3D插件，该插件自动生成构建入口静态方法
-    - plugin_unity3d --version latest
-    # 使用企业签名证书插件，该插件自动安装企业签名证书
-    - plugin_entcert
-    # 使用XCode插件
-    - plugin_xcode
+    - brew install nvm
+    - nvm install v8.6.0
+    - npm install
+    - npm run
